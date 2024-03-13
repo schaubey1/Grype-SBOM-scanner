@@ -7,6 +7,6 @@ sudo curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh |
 sudo curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
 # Create SBOM and run scan
 
-sudo syft / -o template -o spdx-json=sbom.spdx.json
+sudo syft / -o spdx-json=sbom.spdx.json
 
 grype --only-fixed sbom.spdx.json >> grype_report.txt
